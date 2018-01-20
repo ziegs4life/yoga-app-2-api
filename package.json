@@ -1,0 +1,23 @@
+{
+  "name": "yoga-app-2-api",
+  "version": "1.0.0",
+  "description": "Yoga Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziegs4life/yoga-app-2-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziegs4life/yoga-app-2-api/issues"
+  },
+  "homepage": "https://github.com/ziegs4life/yoga-app-2-api#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "sequelize": "^4.31.2"
+  }
+}
