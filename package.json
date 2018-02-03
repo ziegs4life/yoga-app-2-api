@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/ziegs4life/yoga-app-2-api#readme",
   "dependencies": {
+    "axios": "^0.17.1",
     "express": "^4.16.2",
+    "pg": "^7.4.1",
     "sequelize": "^4.31.2"
   }
 }
