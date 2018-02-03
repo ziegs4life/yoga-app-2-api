@@ -75,20 +75,14 @@ app.get('/my_workouts', (req, res) => {
 
 app.post('/my_workouts', (req, res)=>{
 	contentType: 'application/json',
-	var email = req.body.email
-	var name = req.body.name
-	var workout_date = req.body.workout_date
-	var workout_duration = req.body.workout_duration
-	var pose_array = req.body.pose_array
-	var muscle_array = req.body.muscle_array
 
 	Workout.create({
-		email: email,
-		name: name,
-		workout_date: workout_date,
-		workout_duration: workout_duration,
-		pose_array: pose_array,
-		muscle_array: muscle_array
+		email: req.body.email,
+		name: req.body.name,
+		workout_date: req.body.workout_date,
+		workout_duration: req.body.workout_duration,
+		pose_array: req.body.pose_array,
+		muscle_array: req.body.muscle_array
 	})
 })
 
