@@ -38,24 +38,24 @@ const Workout = sequelize.define('workouts', {
 
 
 sequelize.sync()
-	.then(()=> Workout.bulkCreate([
-		{
-			email: 'prsullivan5@gmail.com', 
-			name: 'Patrick Sullivan',
-			workout_date: '02/02/18',
-			workout_duration: 60,
-			pose_array: ['Saddle', 'Seated Forward Fold', 'Pigeon'],
-			muscle_array: ['Quads', 'Hamstrings', 'Hips']
-		},
-		{
-			email: 'ziegs4life@gmail.com', 
-			name: 'Adam Ziegele',
-			workout_date: '02/02/18',
-			workout_duration: 120,
-			pose_array: ['Twisted Lizard', 'Dragon', 'Pigeon'],
-			muscle_array: ['Quads', 'Hamstrings', 'Hips']
-		}
-	]))
+	// .then(()=> Workout.bulkCreate([
+	// 	{
+	// 		email: 'prsullivan5@gmail.com', 
+	// 		name: 'Patrick Sullivan',
+	// 		workout_date: '02/02/18',
+	// 		workout_duration: 60,
+	// 		pose_array: ['Saddle', 'Seated Forward Fold', 'Pigeon'],
+	// 		muscle_array: ['Quads', 'Hamstrings', 'Hips']
+	// 	},
+	// 	{
+	// 		email: 'ziegs4life@gmail.com', 
+	// 		name: 'Adam Ziegele',
+	// 		workout_date: '02/02/18',
+	// 		workout_duration: 120,
+	// 		pose_array: ['Twisted Lizard', 'Dragon', 'Pigeon'],
+	// 		muscle_array: ['Quads', 'Hamstrings', 'Hips']
+	// 	}
+	// ]))
 
 app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -84,6 +84,8 @@ app.post('/my_workouts', (req, res)=>{
 		pose_array: req.body.pose_array,
 		muscle_array: req.body.muscle_array
 	})
+
+	res.json('success')
 })
 
 // app.get('/tickets', (req, res) => {
