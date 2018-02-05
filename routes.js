@@ -65,9 +65,13 @@ app.use(function(req, res, next) {
 });
 
 
-app.get('/my_workouts', (req, res) => {
-	console.log('this works')
-	Workout.findAll()
+app.get('/my_workouts/:email', (req, res) => {
+	console.log(req.params)
+	Workout.findAll({
+		where: {
+			email: req.params.email
+		}
+	})
 	.then(workouts => {
 		res.send(workouts)
 	})
